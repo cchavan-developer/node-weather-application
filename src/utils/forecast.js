@@ -14,7 +14,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to get weather', undefined);
         } else {
             const data = body.current;
-            callback(undefined, `${data.weather_descriptions}. The temperature is ${data.temperature} degrees celcius, but it feels like ${data.feelslike} degree celcius`);
+            callback(undefined, `${data.weather_descriptions}. The temperature is ${data.temperature} degrees celcius, but it feels like ${data.feelslike} degree celcius. Humidity is ${data.humidity}.`);
         }
     })
 }
